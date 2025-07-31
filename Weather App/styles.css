@@ -1,9 +1,12 @@
-
-
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   background-color: #f7f7f7;
+  transition: background 0.5s ease;
+}
+
+body {
+  transition: background 0.5s ease;
 }
 
 .container {
@@ -50,6 +53,12 @@ form input[type="submit"]:hover {
   background-color: #0062cc;
 }
 
+.city-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
 .icon img {
   width: 100px;
   height: 100px;
@@ -59,7 +68,7 @@ form input[type="submit"]:hover {
 }
 
 .temperature {
-  font-size: 48px;
+  font-size: 38px;
   font-weight: bold;
   margin: 20px 0;
 }
@@ -75,6 +84,7 @@ form input[type="submit"]:hover {
   align-items: center;
   flex-wrap: wrap;
 }
+
 
 .details > div {
   padding: 20px;
