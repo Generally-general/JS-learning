@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Finder</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>GitHub Profile Finder</h1>
+    <form>
+      <input id="username-input" type="text" placeholder="Enter username">
+      <input type="submit" value="Find">
+    </form>
+    <div id="user-data">
+      <div id="icon">
+        <img src="" alt="GitHub Avatar">
+      </div>
+      <h2 id="name">—</h2>
+      <div id="username">—</div>
+      <div id="bio">—</div>
+      <div id="stats">
+        <div>Followers: —</div>
+        <div>Following: —</div>
+        <div>Public Repos: —</div>
+        <div>Public Gists: —</div>
+      </div>
+      <div id="contacts">
+        <div>GitHub Link: <a href="#">—</a></div>
+        <div>Blog Link: <a href="#">—</a></div>
+        <div>Twitter: <a href="#">—</a></div>
+      </div>
+      <div id="extras">
+        <div>Created At: —</div>
+        <div>Location: —</div>
+      </div>
+      <p id="error-message" style="color: red;"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
