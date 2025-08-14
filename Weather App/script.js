@@ -41,6 +41,8 @@ async function getWeatherData(cityValue) {
     const currentTimeUTC = new Date().getTime();
     const localTime = new Date(currentTimeUTC + timeZone * 1000);
 
+    const countryCode = data.sys.country;
+
     const details = [
       `Feels Like: ${Math.round(data.main.feels_like)}&#8451;`,
       `Humidity: ${Math.round(data.main.humidity)}%`,
@@ -58,7 +60,13 @@ async function getWeatherData(cityValue) {
       throw new Error("Required elements are missing in DOM");
     }
 
-    cityTitleEl.textContent = capitalizeFirst(cityValue);
+    cityTitleEl.innerHTML = `
+  ${capitalizeFirst(cityValue)}, ${countryCode}
+  <img src="https://flagcdn.com/w40/${countryCode.toLowerCase()}.png" 
+       alt="${countryCode} flag" 
+       style="vertical-align: middle; margin-left: 8px; border-radius: 3px;
+              border: 1px solid #ccc; box-shadow: 0 0 4px rgba(0,0,0,0.2);">
+`;
     iconEl.innerHTML = `
       <img src="http://openweathermap.org/img/wn/${icon}.png" alt="Weather Icon">
     `
